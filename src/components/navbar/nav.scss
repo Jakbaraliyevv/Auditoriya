@@ -1,0 +1,62 @@
+.header {
+  background: rgba(0, 0, 0, 0.5); /* qora rangni yarim shaffof qilish */
+  backdrop-filter: blur(10px); /* Hira effekt (blur) */
+  position: fixed; /* Yuqorida qotirilgan header */
+  top: 0; /* Ekranning yuqorisidan boshlanadi */
+  width: 100%; /* Ekranni to'liq qoplaydi */
+  z-index: 1000; /* Boshqa elementlar ustidan ko'rinadi */
+}
+
+.header > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5;
+}
+
+.ul {
+  display: flex;
+  align-items: center;
+  gap: 4em;
+
+  li {
+    a {
+      font-size: 1.2em;
+      color: #fff;
+      border-bottom: 1px solid #fff;
+    }
+  }
+}
+
+.register {
+  border: 2px solid #fff;
+  border-radius: 50px;
+  width: 10.2em;
+  height: 2.8em;
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center;
+  color: #fff;
+  background-color: transparent;
+}
+
+.voyti {
+  border-radius: 50px;
+  width: 6em;
+  height: 2.8em;
+  background: #ec8f32;
+  font-weight: 700;
+  font-size: 1em;
+  line-height: 0%;
+  text-align: center;
+  color: #fff;
+}
+.search {
+  background-color: transparent;
+  color: #fff;
+  font-size: 1.2em;
+}
+
+@media(max-width:1029px){
+  
+}

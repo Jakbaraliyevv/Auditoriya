@@ -1,0 +1,53 @@
+.novinki {
+  background-color: rgb(12, 13, 19);
+}
+
+.novinki__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 0;
+
+  h2 {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 32px;
+    color: #fff;
+  }
+
+  button {
+    border-radius: 50px;
+    width: 131px;
+    height: 36px;
+    background: #ec8f32;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 0%;
+    text-align: center;
+    color: #000;
+  }
+}
+
+.novinki__bottom {
+  .novinciCard {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    img {
+      border-radius: 10px;
+    }
+
+    .novinciCardText {
+      p {
+        font-weight: 300;
+        font-size: 16px;
+        color: #adadad;
+      }
+      h4 {
+        font-weight: 500;
+        font-size: 21px;
+        color: #fff;
+      }
+    }
+  }
+}
