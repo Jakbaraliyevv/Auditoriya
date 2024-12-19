@@ -11,8 +11,8 @@ function Home() {
       <Navbar />
       <Showcase />
       <Novinki />
-      {/* <Uzb /> */}
-      {/* <Rus /> */}
+      <Uzb />
+      <Rus />
     </div>
   );
 }

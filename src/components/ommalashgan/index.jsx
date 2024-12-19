@@ -23,6 +23,29 @@ function Uzb() {
             navigation
             pagination={{ clickable: true }}
             loop={true}
+            breakpoints={{
+              // Breakpoints responsivlikni sozlash
+              0: {
+                slidesPerView: 1, // Kichik ekran uchun 1 ta kartacha
+                spaceBetween: 10,
+              },
+              334: {
+                slidesPerView: 2, // 576px dan katta ekran uchun 2 ta kartacha
+                spaceBetween: 15,
+              },
+              655: {
+                slidesPerView: 3, // 768px dan katta ekran uchun 3 ta kartacha
+                spaceBetween: 20,
+              },
+              1024: {
+                slidesPerView: 4, // 1024px dan katta ekran uchun 4 ta kartacha
+                spaceBetween: 25,
+              },
+              1440: {
+                slidesPerView: 5, // Katta ekran uchun 5 ta kartacha
+                spaceBetween: 30,
+              },
+            }}
           >
             {loading ? (
               <h1 className="text-[#FFF]">Loading...</h1>
