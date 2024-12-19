@@ -11,30 +11,36 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1.5;
+  gap: 20px;
 }
 
 .ul {
   display: flex;
   align-items: center;
-  gap: 4em;
+  gap: 60px;
 
   li {
     a {
-      font-size: 1.2em;
+      font-size: 20px;
       color: #fff;
       border-bottom: 1px solid #fff;
     }
   }
 }
 
+.buttonlar {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
 .register {
   border: 2px solid #fff;
   border-radius: 50px;
-  width: 10.2em;
-  height: 2.8em;
+  width: 166px;
+  height: 42px;
   font-weight: 700;
-  font-size: 1em;
+  font-size: 16px;
   text-align: center;
   color: #fff;
   background-color: transparent;
@@ -42,11 +48,11 @@
 
 .voyti {
   border-radius: 50px;
-  width: 6em;
-  height: 2.8em;
+  width: 106px;
+  height: 42px;
   background: #ec8f32;
   font-weight: 700;
-  font-size: 1em;
+  font-size: 16px;
   line-height: 0%;
   text-align: center;
   color: #fff;
@@ -54,9 +60,128 @@
 .search {
   background-color: transparent;
   color: #fff;
-  font-size: 1.2em;
+  font-size: 20px;
 }
 
-@media(max-width:1029px){
-  
+@media (max-width: 1106px) {
+  .ul {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    li {
+      a {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .register {
+    border-radius: 40px;
+    width: 146px;
+    height: 35px;
+    font-size: 14px;
+    background-color: transparent;
+  }
+
+  .voyti {
+    border-radius: 40px;
+    width: 86px;
+    height: 32px;
+    font-size: 14px;
+  }
+  .search {
+    font-size: 20px;
+  }
+
+  .logo {
+    img {
+      width: 160px;
+    }
+  }
+}
+
+@media (max-width: 846px) {
+  .ul {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    li {
+      a {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .register {
+    border-radius: 30px;
+    width: 136px;
+    height: 30px;
+    font-size: 12px;
+  }
+
+  .voyti {
+    border-radius: 30px;
+    width: 76px;
+    height: 30px;
+    font-size: 12px;
+  }
+  .search {
+    font-size: 17px;
+  }
+
+  .logo {
+    img {
+      width: 150px;
+    }
+  }
+}
+
+.menuBars {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .ul {
+    display: none;
+  }
+  .search {
+    display: none;
+  }
+
+  .menuBars {
+    font-size: 20px;
+    color: #fff;
+    display: block;
+  }
+}
+
+@media (max-width: 550px) {
+  .register {
+    display: none;
+  }
+}
+
+@media (max-width: 400px) {
+  .buttonlar {
+    gap: 10px;
+  }
+  .logo {
+    img {
+      width: 140px;
+    }
+  }
+  .menuBars {
+    font-size: 17px;
+    color: #fff;
+    display: block;
+  }
+
+  .voyti {
+    border-radius: 28px;
+    width: 70px;
+    height: 28px;
+    font-size: 10px;
+  }
 }

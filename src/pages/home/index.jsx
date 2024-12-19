@@ -7,8 +7,8 @@ function Home() {
   return (
     <div>
       <Navbar />
-      {/* <Showcase /> */}
-      {/* <Novinki /> */}
+      <Showcase />
+      <Novinki />
     </div>
   );
 }

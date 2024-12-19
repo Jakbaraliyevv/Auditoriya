@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "../img/logo.svg";
 import "./nav.scss";
-import { SearchOutlined } from "@ant-design/icons";
+import { MenuOutlined, SearchOutlined } from "@ant-design/icons";
 function Navbar() {
   return (
     <header className="header nav2">
@@ -25,8 +25,11 @@ function Navbar() {
           <SearchOutlined />
         </button>
 
-        <button className="register">Регистрация</button>
-        <button className="voyti">Войти</button>
+        <div className="buttonlar">
+          <button className="register">Регистрация</button>
+          <button className="voyti">Войти</button>
+          <MenuOutlined className="menuBars" />
+        </div>
       </div>
     </header>
   );

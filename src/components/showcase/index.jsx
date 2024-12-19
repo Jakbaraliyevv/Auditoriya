@@ -3,10 +3,14 @@ import "./showcase.scss";
 import "./showcase.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css"; // Swiperning CSS faylini to'g'ri import qilish
+import Novinki from "../novinki";
+import { useGetDataQuery } from "../../store/api/book-api";
 
 // Swipper
 
 function Showcase() {
+  const { data } = useGetDataQuery();
+
   return (
     <section className="showcase">
       <div className="container">
@@ -32,7 +36,7 @@ function Showcase() {
           <SwiperSlide>
             <div className="all">
               <div className="text">
-                <h1>Книги, которые вам хочется слушать</h1>
+                s<h1>Книги, которые вам хочется слушать</h1>
                 <p>
                   Лучшая подборка аудиокниг по психологиии саморазвитию за все
                   годы издательства...
