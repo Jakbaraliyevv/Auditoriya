@@ -42,7 +42,7 @@ function Register() {
   };
 
   return (
-    <div className=" w-[100%] m-auto h-[100vh] flex items-center flex-col gap-7 justify-center max-[800px]:text-[0.9em] max-[700px]:text-[0.8em] max-[450px]:text-[0.7em] max-[600px]:text-[0.6em] max-[350px]:text-[0.5em]">
+    <div className=" w-[90%] m-auto h-[100vh] flex items-center flex-col gap-7 justify-center max-[800px]:text-[0.9em] max-[700px]:text-[0.8em] max-[450px]:text-[0.7em] max-[600px]:text-[0.6em] max-[350px]:text-[0.5em]">
       <div className="w-[30%] h-auto py-[4em] px-[2em] bg-[#2A2A2A] rounded-lg max-[1210px]:w-[40%] max-[1000px]:w-[50%] max-[800px]:w-[60%] max-[600px]:w-[70%] max-[500px]:w-[80%] max-[450px]:w-[90%]">
         <h1 className="text-[#FFF] text-[1.6em] text-center pb-9">
           Create new profile
