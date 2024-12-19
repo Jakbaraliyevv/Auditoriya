@@ -1,18 +1,19 @@
 import React from "react";
-import "./novinki.scss";
+// import ".";
+import "../novinki/novinki.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { useGetDataQuery } from "../../store/api/book-api";
 import Card from "../cards";
 
-function Novinki() {
+function Rus() {
   const { data, loading } = useGetDataQuery();
 
   return (
     <section className="novinki">
       <div className="container">
         <div className="novinki__top">
-          <h2> Yangi nashirlar </h2>
+          <h2> Rus tilida </h2>
           <button className="novinkiBtn">Barchasini ko'rish</button>
         </div>
         <div className="novinki__bottom">
@@ -26,7 +27,7 @@ function Novinki() {
             {loading ? (
               <h1 className="text-[#FFF]">Loading...</h1>
             ) : data?.length ? (
-              data[0]["YangiNashirlar"].map((value, index) => {
+              data[2]["YangiNashirlar3"].map((value, index) => {
                 console.log(value);
                 return (
                   <SwiperSlide key={index}>
@@ -44,4 +45,4 @@ function Novinki() {
   );
 }
 
-export default Novinki;
+export default Rus;

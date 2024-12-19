@@ -36,7 +36,7 @@ import { createApi, fetchBaseQuery, retry } from "@reduxjs/toolkit/query/react";
 
 const fetchBaseQueryWithRetry = retry(
   fetchBaseQuery({
-    baseUrl: "http://localhost:3000/",
+    baseUrl: "https://6718988a7fc4c5ff8f4a1f17.mockapi.io/person/?",
   }),
   { maxRetries: 0 }
 );

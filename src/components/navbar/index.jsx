@@ -11,13 +11,13 @@ function Navbar() {
         </div>
         <ul className="ul">
           <li className="li">
-            <a href="#">Как купить </a>
+            <a href="#">Sotib olish </a>
           </li>
           <li className="li">
             <a href="#"> F.A.Q </a>
           </li>
           <li className="li">
-            <a href="#">Контакты</a>
+            <a href="#">Kontakt</a>
           </li>
         </ul>
 
@@ -26,8 +26,8 @@ function Navbar() {
         </button>
 
         <div className="buttonlar">
-          <button className="register">Регистрация</button>
-          <button className="voyti">Войти</button>
+          <button className="register">Registiratsiya</button>
+          <button className="voyti">Kirish</button>
           <MenuOutlined className="menuBars" />
         </div>
       </div>

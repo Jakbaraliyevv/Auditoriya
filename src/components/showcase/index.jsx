@@ -24,13 +24,13 @@ function Showcase() {
           <SwiperSlide>
             <div className="all">
               <div className="text">
-                <h1>Книги, которые вам хочется слушать</h1>
+                <h1>Siz tinglashni istagan kitoblar</h1>
                 <p>
-                  Лучшая подборка аудиокниг по психологиии саморазвитию за все
-                  годы издательства...
+                  Barcha yillar davomida nashr etilgan psixologiya va o'zini
+                  rivojlantirish bo'yicha eng yaxshi audiokitoblar to'plami...
                 </p>
               </div>
-              <button className="button">Выбрать книгу</button>
+              <button className="button">Kitobni tanlash</button>
             </div>
           </SwiperSlide>
           <SwiperSlide>
