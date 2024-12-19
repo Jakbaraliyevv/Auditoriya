@@ -7,15 +7,19 @@
   background-size: cover;
 }
 
+.text {
+  width: 100% !important;
+}
+
 .all {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-top: 200px;
+
   h1 {
-    width: 55%;
     font-weight: 700;
-    font-size: 62px;
+    font-size: 3.7em;
     line-height: 97%;
     background: linear-gradient(
       203deg,
@@ -28,21 +32,95 @@
     -webkit-text-fill-color: transparent;
   }
   p {
-    width: 55%;
     font-family: var(--font-family);
     font-weight: 500;
-    font-size: 24px;
+    font-size: 1.3em;
     color: #fff;
     margin-top: 40px;
   }
+
+  .button {
+    font-weight: 700;
+    font-size: 1.3em;
+    text-align: center;
+    color: #fff;
+    border-radius: 50px;
+    width: 15em;
+    height: 4.4em;
+    background: #ec8f32;
+  }
 }
-.button {
-  font-weight: 700;
-  font-size: 24px;
-  text-align: center;
-  color: #fff;
-  border-radius: 50px;
-  width: 248px;
-  height: 79px;
-  background: #ec8f32;
+@media (max-width: 1137px) {
+  .all h1 {
+    font-size: 2.5em; /* Matn o'lchamini kichraytirish */
+  }
+
+  .all p {
+    font-size: 1em; /* Matnni moslashtirish */
+    margin-top: 20px;
+  }
+
+  .button {
+    width: 12em !important; /* Tugma kengligini moslashtirish */
+    height: 3.9em !important; /* Tugma balandligini moslashtirish */
+    font-size: 1.1em !important;
+  }
+}
+
+@media (max-width: 850px) {
+  .all h1 {
+    font-size: 2.2em; /* Matn o'lchamini kichraytirish */
+  }
+
+  .all p {
+    font-size: 0.8em; /* Matnni moslashtirish */
+    margin-top: 20px;
+  }
+
+  .button {
+    width: 12em !important; /* Tugma kengligini moslashtirish */
+    height: 4em !important; /* Tugma balandligini moslashtirish */
+    font-size: 0.8em !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .all {
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+    h1 {
+      width: 100% !important;
+      font-size: 2.2em; /* Matn o'lchamini kichraytirish */
+    }
+
+    .all p {
+      width: 100% !important;
+      font-size: 0.8em; /* Matnni moslashtirish */
+      margin-top: 20px;
+    }
+
+    .button {
+      width: 80% !important; /* Tugma kengligini moslashtirish */
+      height: 4em !important; /* Tugma balandligini moslashtirish */
+      font-size: 0.8em !important;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .all {
+    h1 {
+      font-size: 1.9em; /* Matn o'lchamini kichraytirish */
+    }
+
+    .all p {
+      font-size: 0.7em !important; /* Matnni moslashtirish */
+    }
+
+    .button {
+      height: 3.3em !important; /* Tugma balandligini moslashtirish */
+      font-size: 0.8em !important;
+    }
+  }
 }

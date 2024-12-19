@@ -9,7 +9,6 @@
   padding: 60px 0;
 
   h2 {
-    font-family: var(--font-family);
     font-weight: 500;
     font-size: 32px;
     color: #fff;
@@ -49,9 +48,36 @@
         color: #fff;
       }
 
-      a{
-        color: #FFF;
+      a {
+        color: #fff;
       }
+    }
+  }
+}
+
+@media (max-width: 560px) {
+  .novinki__top {
+    h2 {
+      font-size: 27px;
+    }
+
+    button {
+      width: 111px;
+      font-size: 10px;
+    }
+  }
+}
+
+@media (max-width: 560px) {
+  .novinki__top {
+    h2 {
+      font-size: 21px;
+    }
+
+    button {
+      width: 91px;
+      height: 25px;
+      font-size: 9px;
     }
   }
 }
