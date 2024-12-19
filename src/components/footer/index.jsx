@@ -31,7 +31,7 @@ function Footer() {
           onChange={handleChange}
         >
           <BottomNavigationAction
-            label="Recents"
+            label="Bosh"
             value="recents"
             icon={
               <HomeIcon
@@ -41,7 +41,7 @@ function Footer() {
             }
           />
           <BottomNavigationAction
-            label="Favorites"
+            label="Qidiruv"
             value="favorites"
             icon={
               <SearchIcon
@@ -51,7 +51,7 @@ function Footer() {
             }
           />
           <BottomNavigationAction
-            label="Nearby"
+            label="Savat"
             value="nearby"
             icon={
               <ShoppingCartIcon
@@ -61,7 +61,7 @@ function Footer() {
             }
           />
           <BottomNavigationAction
-            label="Folder"
+            label="Saralanganlar"
             value="folder"
             icon={
               <FavoriteIcon
@@ -71,7 +71,7 @@ function Footer() {
             }
           />
           <BottomNavigationAction
-            label="Folder2"
+            label="Kontakt"
             value="folder2"
             icon={
               <ContactMailIcon
