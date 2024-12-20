@@ -11,7 +11,7 @@ function Rus() {
 
   return (
     <section className="novinki">
-      <div className="container">
+      <div className="container1">
         <div className="novinki__top">
           <h2> Rus tilida </h2>
           <button className="novinkiBtn">Barchasini ko'rish</button>

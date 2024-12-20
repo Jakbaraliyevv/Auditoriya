@@ -25,7 +25,7 @@ function Navbar() {
 
   return (
     <header className="header nav2">
-      <div className="container">
+      <div className="container1">
         <div className="logo">
           <img
             onClick={navSubmit}

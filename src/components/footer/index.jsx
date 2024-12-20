@@ -92,7 +92,7 @@ function Footer() {
           />
         </BottomNavigation>
       ) : (
-        <div className="container flex items-start justify-between">
+        <div className="container1 flex items-start justify-between">
           <div>
             <img src={logo} alt="" />
           </div>
