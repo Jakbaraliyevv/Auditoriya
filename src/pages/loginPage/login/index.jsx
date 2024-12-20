@@ -39,7 +39,7 @@ function Login() {
   };
 
   return (
-    <div className=" w-[100%] h-[100vh] flex items-center flex-col gap-7 justify-center  max-[450px]:text-[0.8em]">
+    <div className=" w-[90%] m-auto h-[100vh] flex items-center flex-col gap-7 justify-center  max-[450px]:text-[0.8em]">
       <div className="w-[30%] h-auto py-[4em] px-[2em] bg-[#2A2A2A] rounded-lg max-[1000px]:w-[40%] max-[800px]:w-[60%]  max-[600px]:w-[80%]  max-[400px]:w-[90%]">
         <h1 className="text-[#FFF] text-[1.6em] text-center pb-9">Login</h1>
 
