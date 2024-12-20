@@ -26,8 +26,16 @@ const korzinaSlice = createSlice({
         });
       }
     },
+
+    deletCard: (state, { payload }) => {
+      state.korzinaData = state.korzinaData.filter(
+        (item) => item.id !== payload
+      );
+
+      localStorage.setItem("korzina", JSON.stringify(state.korzinaData));
+    },
   },
 });
 
-export const { addDoCard } = korzinaSlice.actions;
+export const { addDoCard, deletCard } = korzinaSlice.actions;
 export default korzinaSlice.reducer;

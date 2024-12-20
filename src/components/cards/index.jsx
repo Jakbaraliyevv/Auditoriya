@@ -3,6 +3,7 @@ import { HeartOutlined, ShoppingCartOutlined } from "@ant-design/icons";
 import { Button } from "antd";
 import { useDispatch } from "react-redux";
 import { addDoCard } from "../../store/korzina-slice";
+
 function Card(data) {
   const dispatch = useDispatch();
 
@@ -44,7 +45,6 @@ function Card(data) {
           <Button
             onClick={() => {
               dispatch(addDoCard(data));
-              
             }}
             className="!text-[1em] bg-transparent group hover:!bg-transparent"
           >

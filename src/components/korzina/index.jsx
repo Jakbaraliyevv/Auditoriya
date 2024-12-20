@@ -1,9 +1,12 @@
 import React from "react";
 import Navbar from "../navbar";
 import { Button } from "antd";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { deletCard } from "../../store/korzina-slice";
 function KorzinaComponents() {
   const getData = useSelector((state) => state.korzina.korzinaData);
+
+  const dispatch = useDispatch();
 
   return (
     <>
@@ -54,7 +57,12 @@ function KorzinaComponents() {
                         </h3>
                       </div>
                     </div>
-                    <Button className="w-full h-[2.4em]" type="primary" danger>
+                    <Button
+                      onClick={() => dispatch(deletCard(value.id))}
+                      className="w-full h-[2.4em]"
+                      type="primary"
+                      danger
+                    >
                       Delete
                     </Button>
                   </div>
