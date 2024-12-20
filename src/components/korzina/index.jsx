@@ -2,11 +2,13 @@ import React from "react";
 import Navbar from "../navbar";
 import { Button } from "antd";
 import { useDispatch, useSelector } from "react-redux";
-import { deletCard } from "../../store/korzina-slice";
+import { deletCard, increment, decrement } from "../../store/korzina-slice";
 function KorzinaComponents() {
   const getData = useSelector((state) => state.korzina.korzinaData);
 
   const dispatch = useDispatch();
+
+  let totalPrice = getData.reduce((acc, value) => (acc += value.userPrice), 0);
 
   return (
     <>
@@ -40,9 +42,18 @@ function KorzinaComponents() {
 
                 <div className="w-[40%] flex items-center justify-between">
                   <div className="w-[140px] flex items-center gap-2">
-                    <Button className="text-[1.5em]">-</Button>
-                    <span className="text-[#FFF] text-[1em]">1</span>
-                    <Button>+</Button>
+                    <Button
+                      onClick={() => dispatch(decrement(value.id))}
+                      className="text-[1.5em]"
+                    >
+                      -
+                    </Button>
+                    <span className="text-[#FFF] text-[1em] flex items-center justify-center w-[20px]">
+                      {value.count}
+                    </span>
+                    <Button onClick={() => dispatch(increment(value.id))}>
+                      +
+                    </Button>
                   </div>
 
                   <div className=" flex flex-col gap-4">
@@ -53,7 +64,7 @@ function KorzinaComponents() {
                       <div className="flex items-center gap-7">
                         <p className="text-[#FFF] text-[1em]">Narxi :</p>
                         <h3 className="text-[#FFF] font-bold text-[1.2em]">
-                          {value.price}
+                          {value.userPrice}
                         </h3>
                       </div>
                     </div>
@@ -79,7 +90,7 @@ function KorzinaComponents() {
               <div className="flex items-center justify-between">
                 <h2 className="text-[#FFF] text-[1.1em]">Jami:</h2>
                 <h4 className="text-[#FFF] font-bold text-[1.1em]">
-                  umumiy qiymat
+                  {totalPrice}
                 </h4>
               </div>
             </div>

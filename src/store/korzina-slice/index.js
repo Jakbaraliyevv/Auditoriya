@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { notification } from "antd";
+import { use } from "react";
 const initialState = {
   korzinaData: JSON.parse(localStorage.getItem("korzina")) || [],
 };
@@ -14,7 +15,11 @@ const korzinaSlice = createSlice({
       );
 
       if (!findOldData) {
-        state.korzinaData = [...state.korzinaData, payload];
+        state.korzinaData = [
+          ...state.korzinaData,
+          { ...payload, userPrice: payload.price },
+        ];
+
         notification.success({
           message: "Maxsulot savtaga qo'shildi",
         });
@@ -34,8 +39,34 @@ const korzinaSlice = createSlice({
 
       localStorage.setItem("korzina", JSON.stringify(state.korzinaData));
     },
+
+    increment: (state, { payload }) => {
+      state.korzinaData = state.korzinaData.map((value) =>
+        value.id === payload
+          ? {
+              ...value,
+              count: value.count + 1,
+              userPrice: (value.count + 1) * value.price,
+            }
+          : value
+      );
+    },
+
+    decrement: (state, { payload }) => {
+      state.korzinaData = state.korzinaData.map((value) =>
+        value.id === payload
+          ? {
+              ...value,
+              count: value.count > 1 ? value.count - 1 : 1,
+              userPrice:
+                value.count > 1 ? (value.count - 1) * value.price : value.price,
+            }
+          : value
+      );
+    },
   },
 });
 
-export const { addDoCard, deletCard } = korzinaSlice.actions;
+export const { addDoCard, deletCard, increment, decrement } =
+  korzinaSlice.actions;
 export default korzinaSlice.reducer;

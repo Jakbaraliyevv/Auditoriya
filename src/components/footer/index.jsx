@@ -8,6 +8,9 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import ContactMailIcon from "@mui/icons-material/ContactMail";
 import SearchIcon from "@mui/icons-material/Search";
+import { Badge } from "antd";
+import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 function Footer() {
   const [value, setValue] = React.useState("recents");
@@ -18,6 +21,13 @@ function Footer() {
 
   const mobile = useMediaQuery("(max-width:768px)");
 
+  const state = useSelector((state) => state.korzina.korzinaData);
+
+  const navigate = useNavigate();
+
+  const navuSub = () => {
+    navigate("/korzina");
+  };
   return (
     <footer className="mt-[90px]">
       {mobile ? (
@@ -50,11 +60,14 @@ function Footer() {
           <BottomNavigationAction
             label="Savat"
             value="nearby"
+            onClick={navuSub}
             icon={
-              <ShoppingCartIcon
-                sx={{ color: value === "nearby" ? "blue" : "white" }} // "nearby" uchun rangni o'zgartiradi
-                fontSize="large"
-              />
+              <Badge count={state.length}>
+                <ShoppingCartIcon
+                  sx={{ color: value === "nearby" ? "blue" : "white" }} // "nearby" uchun rangni o'zgartiradi
+                  fontSize="large"
+                />
+              </Badge>
             }
           />
           <BottomNavigationAction
