@@ -50,7 +50,6 @@ function Novinki() {
               <h1 className="text-[#FFF]">Loading...</h1>
             ) : data?.length ? (
               data[0]["YangiNashirlar"].map((value, index) => {
-                console.log(value);
                 return (
                   <SwiperSlide key={index}>
                     {value ? <Card {...value} /> : <p>No data for this card</p>}
