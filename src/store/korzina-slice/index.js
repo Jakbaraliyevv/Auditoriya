@@ -38,6 +38,9 @@ const korzinaSlice = createSlice({
       );
 
       localStorage.setItem("korzina", JSON.stringify(state.korzinaData));
+      notification.error({
+        message: "Maxshulot o'chirildi",
+      });
     },
 
     increment: (state, { payload }) => {
