@@ -19,8 +19,8 @@ function Login() {
 
     e.preventDefault();
     const userData = {
-      userName: getUserEmail.current.input.value,
-      userPassWord: getUserPassWord.current.input.value,
+      userName: getUserEmail.current.value,
+      userPassWord: getUserPassWord.current.value,
     };
 
     const checkEmail = getData.find(
