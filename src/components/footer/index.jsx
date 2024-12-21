@@ -28,6 +28,10 @@ function Footer() {
   const navuSub = () => {
     navigate("/korzina");
   };
+
+  const navHome = () => {
+    navigate("/home");
+  };
   return (
     <footer className="mt-[90px]">
       {mobile ? (
@@ -39,6 +43,7 @@ function Footer() {
         >
           <BottomNavigationAction
             label="Bosh"
+            onClick={navHome}
             value="recents"
             icon={
               <HomeIcon

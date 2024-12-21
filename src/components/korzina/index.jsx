@@ -6,6 +6,7 @@ import { deletCard, increment, decrement } from "../../store/korzina-slice";
 import savat from "../img/bosh.webp";
 import { useNavigate } from "react-router-dom";
 import Footer from "../footer";
+import "./korzina.scss";
 function KorzinaComponents() {
   const getData = useSelector((state) => state.korzina.korzinaData);
 
@@ -25,17 +26,17 @@ function KorzinaComponents() {
 
       {getData.length ? (
         <section className="container1 ">
-          <div className="mt-[120px] flex items-start justify-between w-[100%] gap-2 max-[1028px]:flex-col">
-            <div className=" w-[80%] py-4 px-5 border-gray-500 border-[1px] rounded-lg">
+          <div className="zaybal  mt-[120px] flex items-start justify-between w-[100%] gap-2 ">
+            <div className="all11 w-[80%] py-4 px-5 border-gray-500 border-[1px] rounded-lg">
               {getData.map((value) => (
                 <div
                   key={value.id}
-                  className="flex items-center justify-between gap-4 mt-[40px] max-[1111px]:text-[0.8em]"
+                  className="zaybal2 flex items-center justify-between gap-4 mt-[40px] max-[1111px]:text-[0.8em]  "
                 >
-                  <div className="w-[60%] flex items-center gap-5">
+                  <div className="uzun w-[60%] flex items-center gap-5">
                     <div className="">
                       <img
-                        className="w-[250px] h-[220px]"
+                        className="w-[16em] h-[14em]"
                         src={value.img}
                         alt=""
                       />
@@ -51,7 +52,7 @@ function KorzinaComponents() {
                     </div>
                   </div>
 
-                  <div className="w-[40%] flex items-center justify-between gap-4">
+                  <div className="zaybal3 w-[40%] flex items-center justify-between gap-4">
                     <div className="w-[140px] flex items-center gap-2">
                       <Button
                         onClick={() => dispatch(decrement(value.id))}
@@ -81,7 +82,7 @@ function KorzinaComponents() {
                       </div>
                       <Button
                         onClick={() => dispatch(deletCard(value.id))}
-                        className="w-full h-[2.4em]"
+                        className="w-full h-[2.4em] text-[1em]"
                         type="primary"
                         danger
                       >
@@ -93,7 +94,7 @@ function KorzinaComponents() {
               ))}
             </div>
 
-            <div className="w-[19%] py-7 px-5 rounded-lg border-gray-500 border-[1px] flex flex-col gap-10">
+            <div className="zaybal4 w-[19%] py-7 px-5 rounded-lg border-gray-500 border-[1px] flex flex-col gap-10 ">
               <div className="flex flex-col gap-3">
                 <h2 className="text-[#FFF] font-bold text-[1.2em]">
                   Buyurtmangiz
@@ -105,7 +106,7 @@ function KorzinaComponents() {
                   </h4>
                 </div>
               </div>
-              <Button className="h-[2.4em]" type="primary">
+              <Button className="h-[2.4em] text-[1em]" type="primary">
                 Sotib olish
               </Button>
             </div>

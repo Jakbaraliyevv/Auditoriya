@@ -1,0 +1,49 @@
+@media (max-width: 1022px) {
+  .zaybal {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .uzun {
+    width: 100%;
+  }
+
+  .zaybal3 {
+    width: 100%;
+  }
+
+  .zaybal4 {
+    width: 40%;
+  }
+
+  .all11 {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .zaybal2 {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .zaybal3 {
+    display: flex;
+    align-items: end;
+  }
+
+  .zaybal4 {
+    font-size: 0.8em;
+    width: 60%;
+  }
+}
+
+@media (max-width: 450px) {
+  .zaybal2 {
+    font-size: 0.7em;
+  }
+  .zaybal4 {
+    font-size: 0.7em;
+    width: 80%;
+  }
+}
